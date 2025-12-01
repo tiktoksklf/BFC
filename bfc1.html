@@ -269,16 +269,163 @@
     <h2>Main Event</h2>
 
     <div class="fight-box">
-        <div class="fight-title">Main Event – EFC 1</div>
+    <div class="fight-title">Main Event – EFC 1</div>
 
-        <div class="fight-line">Anthony Logalbo — 16-0 Boxing</div>
-        <a href="anthonylogalbo.html" class="btn">View Fighter</a>
+    <div class="fight-title">12-06-2025 3:00PM EST</div>
+    <div class="fight-line">Anthony Logalbo — 16-0 Boxing</div>
+    <a href="anthonylogalbo.html" class="btn">View Fighter</a>
 
-        <div class="fight-line" style="margin-top:10px;">VS</div>
+    <div class="fight-line" style="margin-top:10px;">VS</div>
 
-        <div class="fight-line">Gabriel Alameda — 0-0 Boxing</div>
-<a href="GabrielAlameda.html" class="btn">View Fighter</a>
-    </div>
+    <div class="fight-line">Gabriel Alameda — 0-0 Boxing</div>
+    <a href="GabrielAlameda.html" class="btn">View Fighter</a>
+
+    <!-- YOUTUBE BUTTON -->
+    <a href="bigboxingrec@gmail.com
+" target="_blank" style="
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap:8px;
+            margin-top:20px;
+            padding:10px 14px;
+            background:#111;
+            color:white;
+            border:1px solid #444;
+            border-radius:6px;
+            text-decoration:none;
+            font-size:14px;
+            font-weight:600;
+       ">
+        <span style="
+            display:inline-block;
+            width:14px;
+            height:10px;
+            background:white;
+            clip-path:polygon(0% 0%, 100% 50%, 0% 100%);
+        "></span>
+        Watch on YouTube
+    </a>
+</div>
+
+
+<script>
+// ---- SIMPLE GUARANTEED WORKING COUNTDOWN ----
+
+// Target date (December 6, 2025 at noon)
+var targetDate = new Date(2025, 11, 6, 0, 0, 0).getTime();
+// IMPORTANT:
+// Months are 0-indexed in JS.
+// 11 = December
+
+function updateTimer() {
+    var now = new Date().getTime();
+    var diff = targetDate - now;
+
+    // finished
+    if (diff <= 0) {
+        document.getElementById("countdown").innerHTML = "EVENT IS LIVE!";
+        return;
+    }
+
+    // convert time
+    var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    // display
+    document.getElementById("countdown").innerHTML =
+        days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+}
+
+// run once instantly
+updateTimer();
+
+// update every second
+setInterval(updateTimer, 1000);
+</script>
+
+
+
+<script>
+// SIMPLE COUNTDOWN — THIS ONE ALWAYS WORKS
+var eventDate = new Date("2025-12-06T00:00:00").getTime();
+
+setInterval(function() {
+
+    var now = new Date().getTime();
+    var distance = eventDate - now;
+
+    if (distance <= 0) {
+        document.getElementById("countdown").innerHTML = "EVENT IS LIVE!";
+        return;
+    }
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML =
+        days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+
+}, 1000);
+</script>
+<script>
+    // Target: December 6, 2025 at midnight (your local time)
+    const eventDate = new Date("2025-12-06T00:00:00").getTime();
+
+    const countdownFunction = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = eventDate - now;
+
+        if (distance <= 0) {
+            clearInterval(countdownFunction);
+            document.getElementById("countdown").innerHTML = "EVENT IS LIVE!";
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML =
+            days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    }, 1000);
+</script>
+
+
+<!-- COUNTDOWN TIMER -->
+
+
+<script>
+    // Countdown target date
+    const eventDate = new Date("December 6, 2025 00:00:00").getTime();
+
+    const countdownFunction = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = eventDate - now;
+
+        // Time calculations
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display timer
+        document.getElementById("countdown").innerHTML =
+            days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+        // If countdown finished
+        if (distance < 0) {
+            clearInterval(countdownFunction);
+            document.getElementById("countdown").innerHTML = "EVENT IS LIVE!";
+        }
+    }, 1000);
+</script>
+
 </div>
 
 <!-- OTHER FIGHTS -->
